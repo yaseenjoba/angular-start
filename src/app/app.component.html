@@ -1,15 +1,16 @@
-<label>name: </label>
+<label>Name: </label>
 <input [(ngModel)]="name1" type="text">
 <br>
 <label>ID: </label>
 <input [(ngModel)]="id1" type="text"><br>
 <label>Age: </label>
 <input [(ngModel)]="age1" type="text"><br>
-<label>DAY </label>
+<label>Day: </label>
 <input [(ngModel)]="day" type="text"><br>
-<label>MONTH</label>
+<label>Month:</label>
 <input [(ngModel)]="month" type="text"><br>
-<label>YEAR </label>
+<label>Year: </label>
 <input [(ngModel)]="year" type="text"><br>
 <input type="submit" (click)="add()">
-<div *ngFor="let student of students ">{{student.name}} --{{student.date|date}}</div>
+<input type="text" [(ngModel)]= "search" (keyup)="filter1()">
+<div *ngFor="let student of forsearch ">{{student.name}}|| {{student.date|date}}</div>

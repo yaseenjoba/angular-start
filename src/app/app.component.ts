@@ -18,24 +18,46 @@ export class AppComponent {
   month=8
   day=5;
   year=2000;
+  search="Enter the student name !"
   students = [
     {
       name: "yaseen",
       id: 181033,
       age:20,
-      date:new Date(1,1,2000)
+      date:new Date(2000,1,1)
     },
     {
       name: "Ahmad",
       id: 18100,
       age:12,
-      date:new Date(1,1,2000)
+      date:new Date(2020,5,1)
     },
     {
       name: "mohammed",
       id: 18144,
       age:19,
-      date:new Date(1,1,2005)
+      date:new Date(2005,2,20)
+    }
+  ];
+  
+  forsearch=[
+    {
+      name: "yaseen",
+      id: 181033,
+      age:20,
+      date:new Date(2000,1,1)
+    },
+    {
+      name: "Ahmad",
+      id: 18100,
+      age:12,
+      date:new Date(2020,5,1)
+    },
+    {
+      name: "mohammed",
+      id: 18144,
+      age:19,
+      date:new Date(2005,2,20)
     }
   ];
   add(){
@@ -44,10 +66,16 @@ export class AppComponent {
          "name" : this.name1,
          "id" : this.id1,
          "age":this.age1,
-         "date":new Date(this.day,this.month,this.year)
+         "date":new Date(this.year,this.month,this.day)
       }
     );
+    this.forsearch=this.students;
     
+  }
+  filter1(){
+  this.students.filter((x)=>{(console.log(x.name.includes(this.search)));});
+    this.forsearch = this.students.filter((x)=>x.name.includes(this.search));
+    console.log(this.forsearch);
   }
   
  
