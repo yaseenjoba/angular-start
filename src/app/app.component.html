@@ -1,15 +1,15 @@
 <label>name: </label>
-<input type="text" #name>
+<input [(ngModel)]="name1" type="text" #name>
 <br>
 <label>ID: </label>
-<input type="text" #id><br>
+<input [(ngModel)]="id" type="text" #id><br>
 <label>Age: </label>
-<input type="text" #age>
+<input [(ngModel)]="age" type="text" #age>
 <label>DAY </label>
-<input type="text" #day><br>
+<input [(ngModel)]="day" type="text" #day><br>
 <label>MONTH</label>
-<input type="text" #month><br>
+<input [(ngModel)]="month" type=" text "><br>
 <label>YEAR </label>
-<input type="text" #year><br>
-<input type="submit" (click)="add(name.value,id.value,age.value,day.value,month.value,year.value)">
-<div *ngFor="let student of students">{{student.name}} --{{student.date|date}}</div>
+<input [(ngModel)]="year" type="text "><br>
+<input type="submit " (click)="add() ">
+<div *ngFor="let student of students ">{{student.name}} --{{student.date|date}}</div>

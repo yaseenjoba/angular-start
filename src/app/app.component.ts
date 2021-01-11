@@ -13,6 +13,12 @@ import { loadavg } from 'os';
 export class AppComponent {
   title = 'my-first-project';
   mydate = Date.now();
+  name1="yaseen";
+  id=181033
+  age=20;
+  month=8
+  day=5;
+  year=2000;
   students = [
     {
       name: "yaseen",
@@ -32,13 +38,13 @@ export class AppComponent {
       date:new Date(1,1,2005)
     }
   ];
-  add(name : string ,id: any,age:any,day:any,month:any,year:any){
+  add(){
     this.students.push(
       {
-         "name" : name,
-         "id" : id,
-         "age":age,
-         "date":new Date(day,month,year)
+         "name" : this.name1,
+         "id" : this.id,
+         "age":this.age,
+         "date":new Date(this.day,this.month,this.year)
       }
     );
     
