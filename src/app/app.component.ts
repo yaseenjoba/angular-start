@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
 import { NgModule } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { loadavg } from 'os';
 
 
 @Component({
@@ -14,8 +13,8 @@ export class AppComponent {
   title = 'my-first-project';
   mydate = Date.now();
   name1="yaseen";
-  id=181033
-  age=20;
+  id1=181033
+  age1=20;
   month=8
   day=5;
   year=2000;
@@ -24,6 +23,7 @@ export class AppComponent {
       name: "yaseen",
       id: 181033,
       age:20,
+      date:new Date(1,1,2000)
     },
     {
       name: "Ahmad",
@@ -42,8 +42,8 @@ export class AppComponent {
     this.students.push(
       {
          "name" : this.name1,
-         "id" : this.id,
-         "age":this.age,
+         "id" : this.id1,
+         "age":this.age1,
          "date":new Date(this.day,this.month,this.year)
       }
     );
